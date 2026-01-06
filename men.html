@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Collection - Flexify Premium Sports Wear</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta name="description" content="Explore Flexify's premium men's athletic wear collection. High-performance sportswear designed for athletes who demand comfort, style, and durability.">
+  <link rel="canonical" href="https://flexify.com/men">
+  <meta property="og:title" content="Men's Collection - Flexify Premium Athletic Wear">
+  <meta property="og:description" content="Explore Flexify's premium men's athletic wear collection. High-performance sportswear designed for athletes who demand comfort, style, and durability.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flexify.com/men">
+  <meta property="og:image" content="https://flexify.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Men's Collection - Flexify Premium Athletic Wear">
+  <meta name="twitter:description" content="Explore Flexify's premium men's athletic wear collection. High-performance sportswear designed for athletes who demand comfort, style, and durability.">
+  <meta name="twitter:image" content="https://flexify.com/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="index.html">
+                      <img src="Flexify_Web_Logo.png" alt="Flexify Logo" width="150" height="40" class="h-10">
+                    </a>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="collections.html" class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">Collections</a>
+          <a href="men.html" class="text-black hover:text-gray-700 px-3 py-2 text-sm font-medium transition-colors">Men</a>
+          <a href="women.html" class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">Women</a>
+          <a href="about.html" class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">About</a>
+          <a href="contact.html" class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a href="cart.html" class="hidden md:block relative text-gray-600 hover:text-black">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-green-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+          </a>
+          <!-- Admin login removed as per requirements -->
+          <button class="md:hidden p-2 rounded-full" id="mobileMenuBtn">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu Sidebar -->
+    <div id="mobileSidebar" class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+      <div class="flex flex-col h-full">
+        <div class="p-4 border-b border-gray-200">
+          <h2 class="text-xl font-bold">Menu</h2>
+        </div>
+        <nav class="flex-1 p-4 space-y-4">
+          <a href="collections.html" class="block py-2 text-gray-600 hover:text-black font-medium">Collections</a>
+          <a href="men.html" class="block py-2 text-gray-600 hover:text-black font-medium">Men</a>
+          <a href="women.html" class="block py-2 text-gray-600 hover:text-black font-medium">Women</a>
+          <a href="about.html" class="block py-2 text-gray-600 hover:text-black font-medium">About</a>
+          <a href="contact.html" class="block py-2 text-gray-600 hover:text-black font-medium">Contact</a>
+          <!-- Admin login removed as per requirements -->
+          <a href="cart.html" class="block py-2 text-gray-600 hover:text-black font-medium">Order via WhatsApp (<span id="mobile-cart-count">0</span>)</a>
+        </nav>
+        <div class="p-4 border-t border-gray-200">
+          <button id="closeMobileMenu" class="w-full py-2 px-4 bg-gray-100 rounded-lg text-gray-700 font-medium">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Overlay for mobile menu -->
+    <div id="mobileOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+  </header>
+
+  <main>
+    <section class="min-h-screen">
+      <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h1 class="text-4xl lg:text-5xl font-bold text-black mb-6">Men's Collection</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Premium athletic wear designed specifically for men. Engineered for peak performance and all-day comfort.</p>
+          </div>
+          
+          <div class="grid lg:grid-cols-3 gap-8">
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6">
+                <img data-ai="generate" data-slot="mens-shirts" data-prompt="Men's athletic shirts collection, premium sportswear for men, gym and training environment" data-ar="4:3" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=450&q=80" alt="Men's athletic shirts" width="400" height="300" class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Performance Shirts</h3>
+                  <a href="collections.html" class="text-lg font-medium">Shop Now →</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Performance Shirts</h3>
+                <p class="text-gray-600">Moisture-wicking fabrics with advanced ventilation for optimal comfort.</p>
+              </div>
+            </div>
+            
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6">
+                <img data-ai="generate" data-slot="mens-shorts" data-prompt="Men's athletic shorts collection, premium sportswear for men, gym and training environment" data-ar="4:3" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=450&q=80" alt="Men's athletic shorts" width="400" height="300" class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Training Shorts</h3>
+                  <a href="collections.html" class="text-lg font-medium">Shop Now →</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Training Shorts</h3>
+                <p class="text-gray-600">Four-way stretch technology for maximum mobility during workouts.</p>
+              </div>
+            </div>
+            
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6">
+                <img data-ai="generate" data-slot="mens-jackets" data-prompt="Men's athletic jackets collection, premium sportswear for men, outdoor training environment" data-ar="4:3" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=450&q=80" alt="Men's athletic jackets" width="400" height="300" class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Performance Jackets</h3>
+                  <a href="collections.html" class="text-lg font-medium">Shop Now →</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Performance Jackets</h3>
+                <p class="text-gray-600">Weather-resistant with breathable panels for all conditions.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-16">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-black sm:text-4xl mb-4">Men's Featured Products</h2>
+              <p class="text-lg text-gray-600 max-w-2xl mx-auto">Our most popular items from the men's collection</p>
+            </div>
+            
+            <div id="mens-featured-products" data-product-category="men" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <!-- Products will be loaded dynamically -->
+            </div>
+          </div>
+          
+          <div class="mt-16 py-12 bg-gray-50 rounded-2xl">
+            <div class="max-w-4xl mx-auto px-4">
+              <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-black mb-4">Why Choose Flexify Men's Collection</h2>
+                <p class="text-gray-600">Engineered specifically for men's performance needs</p>
+              </div>
+              
+              <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="droplets" class="w-8 h-8 text-white"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-black mb-2">Advanced Moisture-Wicking</h3>
+                  <p class="text-gray-600">Our proprietary fabric technology keeps you dry and comfortable during the most intense workouts.</p>
+                </div>
+                
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="activity" class="w-8 h-8 text-white"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-black mb-2">Four-Way Stretch</h3>
+                  <p class="text-gray-600">Experience unrestricted movement with our innovative stretch fabric that moves with your body.</p>
+                </div>
+                
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="shield" class="w-8 h-8 text-white"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-black mb-2">Built to Last</h3>
+                  <p class="text-gray-600">Premium construction ensures your gear withstands the toughest training sessions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="bg-black text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="col-span-1">
+          <h2 class="text-2xl font-bold mb-4">Flexify</h2>
+          <p class="text-gray-400 text-sm">Premium athletic wear for peak performance. Designed for athletes who demand the best.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Shop</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="men.html" class="text-gray-400 hover:text-white transition-colors">Men's Collection</a></li>
+            <li><a href="women.html" class="text-gray-400 hover:text-white transition-colors">Women's Collection</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">New Arrivals</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sale</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Company</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sustainability</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Support</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Size Guide</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping & Returns</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">&copy; 2026 Flexify. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="https://www.instagram.com/flexify_official_/" class="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+          <a href="https://wa.me/919087733332" class="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="products.js"></script>
+  <script src="client_products.js"></script>
+  <script>
+    // Initialize lucide icons
+    lucide.createIcons();
+    
+    // Mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileSidebar = document.getElementById('mobileSidebar');
+      const mobileOverlay = document.getElementById('mobileOverlay');
+      const closeMobileMenu = document.getElementById('closeMobileMenu');
+      const checkoutBtn = document.getElementById('checkout-btn');
+      const mobileCheckoutBtn = document.getElementById('mobileCheckoutBtn');
+      
+      // Toggle mobile menu
+      function toggleMobileMenu() {
+        mobileSidebar.classList.toggle('-translate-x-full');
+        mobileOverlay.classList.toggle('hidden');
+        
+        // Toggle body scroll when menu is open
+        if (!mobileSidebar.classList.contains('-translate-x-full')) {
+          document.body.classList.add('overflow-hidden');
+        } else {
+          document.body.classList.remove('overflow-hidden');
+        }
+      }
+      
+      // Event listeners
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+      closeMobileMenu.addEventListener('click', toggleMobileMenu);
+      mobileOverlay.addEventListener('click', toggleMobileMenu);
+      
+      // Initialize cart count
+      function updateCartCount() {
+        // For WhatsApp orders, we just show a notification
+        // In a real implementation, this would update the cart count
+        // For now, we'll just keep it as a placeholder
+        const cartCountElements = document.querySelectorAll('#cart-count, #mobile-cart-count');
+        cartCountElements.forEach(element => {
+          // For now, we'll just show a placeholder count
+          // In a real implementation, you would track selected items
+          element.textContent = '0';
+        });
+      }
+      
+      // Add event listener to mobile checkout button
+      if (mobileCheckoutBtn && checkoutBtn) {
+        mobileCheckoutBtn.addEventListener('click', function() {
+          checkoutBtn.click();
+          toggleMobileMenu(); // Close the menu after clicking
+        });
+      }
+      
+      // Initialize cart count
+      updateCartCount();
+      
+      // Removed MutationObserver for better performance
+      // updateCartCounts is called directly when needed instead
+    });
+    
+    // Disable right-click functionality
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      return false;
+    });
+  </script>
+</body>
+</html>
