@@ -300,6 +300,17 @@
       
       // Removed MutationObserver for better performance
       // updateCartCounts is called directly when needed instead
+      
+      // Initialize product loading and cart functionality
+      if (typeof loadClientProducts === 'function') {
+        loadClientProducts();
+      }
+      if (typeof initCart === 'function') {
+        initCart();
+      }
+      if (typeof initCheckout === 'function') {
+        initCheckout();
+      }
     });
     
     // Disable right-click functionality
