@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexify - Premium Athletic Wear for Peak Performance</title>
+  <meta name="description"
+    content="Discover Flexify's premium athletic wear collection. High-performance sportswear designed for athletes who demand comfort, style, and durability.">
+  <link rel="canonical" href="https://flexify.com">
+  <meta property="og:title" content="Flexify - Premium Athletic Wear for Peak Performance">
+  <meta property="og:description"
+    content="Discover Flexify's premium athletic wear collection. High-performance sportswear designed for athletes who demand comfort, style, and durability.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flexify.com">
+  <meta property="og:image" content="https://flexify.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flexify - Premium Athletic Wear for Peak Performance">
+  <meta name="twitter:description"
+    content="Discover Flexify's premium athletic wear collection. High-performance sportswear designed for athletes who demand comfort, style, and durability.">
+  <meta name="twitter:image" content="https://flexify.com/og-image.jpg">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+  <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="index.html">
+            <img src="Flexify_Web_Logo.png" alt="Flexify Logo" width="150" height="40" class="h-10">
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="collections.html"
+            class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">Collections</a>
+          <a href="men.html"
+            class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">Men</a>
+          <a href="women.html"
+            class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">Women</a>
+          <a href="about.html"
+            class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">About</a>
+          <a href="contact.html"
+            class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a href="cart.html" class="relative text-gray-600 hover:text-black">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+            <span id="cart-count"
+              class="absolute -top-2 -right-2 bg-green-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+          </a>
+          <button class="md:hidden p-2 rounded-full" id="mobileMenuBtn">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Sidebar -->
+    <div id="mobileSidebar"
+      class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+      <div class="flex flex-col h-full">
+        <div class="p-4 border-b border-gray-200">
+          <h2 class="text-xl font-bold">Menu</h2>
+        </div>
+        <nav class="flex-1 p-4 space-y-4">
+          <a href="collections.html" class="block py-2 text-gray-600 hover:text-black font-medium">Collections</a>
+          <a href="men.html" class="block py-2 text-gray-600 hover:text-black font-medium">Men</a>
+          <a href="women.html" class="block py-2 text-gray-600 hover:text-black font-medium">Women</a>
+          <a href="about.html" class="block py-2 text-gray-600 hover:text-black font-medium">About</a>
+          <a href="contact.html" class="block py-2 text-gray-600 hover:text-black font-medium">Contact</a>
+          <a href="cart.html" class="block py-2 text-gray-600 hover:text-black font-medium">Order via WhatsApp (<span
+              id="mobile-cart-count">0</span>)</a>
+        </nav>
+        <div class="p-4 border-t border-gray-200">
+          <button id="closeMobileMenu" class="w-full py-2 px-4 bg-gray-100 rounded-lg text-gray-700 font-medium">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay for mobile menu -->
+    <div id="mobileOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+  </header>
+
+  <main>
+    <section class="min-h-screen">
+      <section class="relative bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+              <h1 class="text-5xl lg:text-7xl font-bold leading-tight">Unleash Your <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">Football</span>
+                Potential</h1>
+              <p class="text-xl lg:text-2xl text-gray-300 leading-relaxed">Premium sportswear engineered for peak
+                performance. Experience the perfect fusion of superior comfort and unmatched durability.</p>
+              <div class="flex flex-col sm:flex-row gap-4"><a href="collections.html"
+                  class="bg-gradient-to-r from-white to-gray-100 hover:from-gray-100 hover:to-white text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg block w-max">Shop
+                  Collection</a><a href="about.html"
+                  class="border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:bg-white/10 inline-block">Learn
+                  More</a></div>
+            </div>
+            <div class="relative"><img src="016862.png" alt="Flexify premium athletic wear" width="800" height="600"
+                class="w-full rounded-2xl object-cover shadow-2xl" loading="eager" decoding="async"
+                fetchpriority="high" />
+              <div
+                class="absolute -bottom-6 -right-6 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-black">50K+</div>
+                  <div class="text-sm text-black">Athletes Trust Us</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="py-16">
+      <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-black mb-6">Engineered for Excellence</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Every piece of Flexify athletic wear is crafted with
+              advanced technology and premium materials to elevate your performance.</p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div class="mb-6"><img data-ai="generate" data-slot="features-1"
+                  data-prompt="Close-up of moisture-wicking fabric technology, water droplets beading on athletic fabric surface"
+                  data-ar="16:9"
+                  src="https://cdn.ailandingpage.ai/ai-landingpage/user-generate/1fa2f5c3-4bdd-45bc-a8fe-e59179a85299/1fa2f5c3-4bdd-45bc-a8fe-e59179a85299/features/features-1-646c35305ec94513889507aa28badb41.png"
+                  alt="Moisture-wicking technology" width="400" height="225" class="w-full rounded-xl object-cover"
+                  loading="lazy" decoding="async" fetchpriority="auto" /></div>
+              <h3 class="text-2xl font-bold text-black mb-4">Advanced Moisture-Wicking</h3>
+              <p class="text-gray-600 leading-relaxed">Our proprietary fabric technology keeps you dry and comfortable
+                during the most intense workouts by rapidly moving sweat away from your skin.</p>
+            </div>
+            <div
+              class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div class="mb-6"><img data-ai="generate" data-slot="features-2"
+                  data-prompt="Athletic wear fabric being stretched to show flexibility and elasticity, demonstrating four-way stretch technology"
+                  data-ar="16:9"
+                  src="https://cdn.ailandingpage.ai/ai-landingpage/user-generate/1fa2f5c3-4bdd-45bc-a8fe-e59179a85299/1fa2f5c3-4bdd-45bc-a8fe-e59179a85299/features/features-2-bc7ec263a37a4a939a1aa45c5f107fc0.png"
+                  alt="Four-way stretch fabric" width="400" height="225" class="w-full rounded-xl object-cover"
+                  loading="lazy" decoding="async" fetchpriority="auto" /></div>
+              <h3 class="text-2xl font-bold text-black mb-4">Four-Way Stretch</h3>
+              <p class="text-gray-600 leading-relaxed">Experience unrestricted movement with our innovative stretch
+                fabric that moves with your body in every direction while maintaining its shape.</p>
+            </div>
+            <div
+              class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div class="mb-6"><img data-ai="generate" data-slot="features-3"
+                  data-prompt="Durable athletic wear being tested for quality, showing reinforced seams and premium construction details"
+                  data-ar="16:9"
+                  src="https://cdn.ailandingpage.ai/ai-landingpage/user-generate/1fa2f5c3-4bdd-45bc-a8fe-e59179a85299/1fa2f5c3-4bdd-45bc-a8fe-e59179a85299/features/features-3-ff137dab997b4809b04083f10fed15e5.png"
+                  alt="Durable construction" width="400" height="225" class="w-full rounded-xl object-cover"
+                  loading="lazy" decoding="async" fetchpriority="auto" /></div>
+              <h3 class="text-2xl font-bold text-black mb-4">Built to Last</h3>
+              <p class="text-gray-600 leading-relaxed">Premium construction with reinforced seams and fade-resistant
+                colors ensures your Flexify gear performs and looks great workout after workout.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="py-16">
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-black mb-6">Discover Our Collections</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">From high-performance training gear to everyday athletic
+              essentials, find the perfect pieces to power your active lifestyle.</p>
+          </div>
+          <div class="grid lg:grid-cols-3 gap-8">
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6"><img data-ai="generate"
+                  data-slot="collections-mens"
+                  data-prompt="Men's athletic wear collection, male model wearing premium sportswear, gym and training environment"
+                  data-ar="4:3"
+                  src="./men.jpg"
+                  alt="Men's athletic collection" width="400" height="300"
+                  class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"
+                  decoding="async" fetchpriority="auto" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div><a href="men.html"
+                  class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Men's Collection</h3>
+                  <p class="text-lg">Shop Now →</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Men's Performance</h3>
+                <p class="text-gray-600">Training essentials designed for strength, endurance, and peak performance in
+                  every workout.</p>
+              </div>
+            </div>
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6"><img data-ai="generate"
+                  data-slot="collections-womens" data-prompt="women sports jpg style image" data-ar="4:3"
+                  src="women_sports.jpg" alt="Women's athletic collection" width="400" height="300"
+                  class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"
+                  decoding="async" fetchpriority="auto" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div><a href="women.html"
+                  class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Women's Collection</h3>
+                  <p class="text-lg">Shop Now →</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Women's Active</h3>
+                <p class="text-gray-600">Stylish and functional pieces that empower you to move with confidence and
+                  grace.</p>
+              </div>
+            </div>
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6"><img data-ai="generate"
+                  data-slot="collections-accessories"
+                  data-prompt="Athletic accessories collection, sports bags, water bottles, fitness gear, premium athletic accessories"
+                  data-ar="4:3"
+                  src="./football.jpg"
+                  alt="Athletic accessories collection" width="400" height="300"
+                  class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"
+                  decoding="async" fetchpriority="auto" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div><a href="collections.html"
+                  class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Accessories</h3>
+                  <p class="text-lg">Shop Now →</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Essential Accessories</h3>
+                <p class="text-gray-600">Complete your football wardrobe with premium bags, bottles, and performance
+                  accessories.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="py-16">
+      <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-black sm:text-4xl mb-4">Why Choose Flexify</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Experience the perfect fusion of performance technology
+              and everyday comfort that elevates your athletic journey.</p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center"><svg
+                      class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg></div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-black mb-2">Peak Performance Technology</h3>
+                  <p class="text-gray-600">Advanced moisture-wicking fabrics and ergonomic design keep you dry and
+                    comfortable during intense workouts, helping you push your limits.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center"><svg
+                      class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                      </path>
+                    </svg></div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-black mb-2">All-Day Comfort</h3>
+                  <p class="text-gray-600">Seamlessly transition from gym to street with versatile designs that offer
+                    unmatched comfort for your active lifestyle.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-gray-600 rounded-lg flex items-center justify-center"><svg
+                      class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg></div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-black mb-2">Durability That Lasts</h3>
+                  <p class="text-gray-600">Premium materials and reinforced construction ensure your Flexify gear
+                    withstands the toughest training sessions and countless washes.</p>
+                </div>
+              </div>
+            </div>
+            <div><img data-ai="generate" data-slot="benefits-performance"
+                data-prompt="Athletic person wearing modern sportswear during intense workout, showing performance and comfort"
+                data-ar="4:3"
+                src="https://cdn.ailandingpage.ai/ai-landingpage/user-generate/1fa2f5c3-4bdd-45bc-a8fe-e59179a85299/1fa2f5c3-4bdd-45bc-a8fe-e59179a85299/benefits/benefits-performance-c4031d53b82e4c459ccb69fd1a50b19f.png"
+                alt="Athlete demonstrating Flexify performance wear" width="800" height="600"
+                class="w-full rounded-2xl object-cover shadow-sm" loading="lazy" decoding="async"
+                fetchpriority="auto" /></div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="py-16">
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-black sm:text-4xl mb-4">Trusted by Athletes Worldwide</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Don't just take our word for it. See what our community
+              of athletes and fitness enthusiasts have to say about Flexify.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-100">
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg></div>
+              </div>
+              <p class="text-gray-700 mb-4">"Flexify gear has completely transformed my training. The moisture-wicking
+                technology keeps me comfortable during my longest runs, and the fit is absolutely perfect."</p>
+              <div class="flex items-center">
+                <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white font-semibold">
+                  SM</div>
+                <div class="ml-3">
+                  <p class="font-semibold text-black">Sarah Martinez</p>
+                  <p class="text-sm text-gray-600">Marathon Runner</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-100">
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg></div>
+              </div>
+              <p class="text-gray-700 mb-4">"As a personal trainer, I need gear that can keep up with my demanding
+                schedule. Flexify delivers on both performance and style every single day."</p>
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white font-semibold">
+                  MJ</div>
+                <div class="ml-3">
+                  <p class="font-semibold text-black">Mike Johnson</p>
+                  <p class="text-sm text-gray-600">Personal Trainer</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-100">
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                    </path>
+                  </svg></div>
+              </div>
+              <p class="text-gray-700 mb-4">"I've tried countless athletic brands, but Flexify stands out. The quality
+                is exceptional and the comfort level is unmatched. Worth every penny!"</p>
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center text-white font-semibold">
+                  AL</div>
+                <div class="ml-3">
+                  <p class="font-semibold text-black">Alex Lee</p>
+                  <p class="text-sm text-gray-600">Fitness Enthusiast</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 text-center"><img data-ai="generate" data-slot="testimonials-customer"
+              data-prompt="football avif style image" data-ar="16:9" src="football.avif"
+              alt="Satisfied Flexify customers" width="1200" height="675"
+              class="w-full max-w-4xl mx-auto rounded-2xl object-cover shadow-sm" loading="lazy" decoding="async"
+              fetchpriority="auto" /></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="py-16">
+      <section class="py-16 bg-gradient-to-r from-black to-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-white sm:text-4xl mb-4">Ready to Elevate Your Performance?</h2>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Join thousands of athletes who trust Flexify for their
+              training and everyday comfort. Experience the difference today.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"><a href="collections.html"
+              class="bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 shadow-lg">Shop
+              Now</a><a href="#newsletter"
+              class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-black transition-colors duration-200">Get
+              Updates</a></div>
+          <div class="flex items-center justify-center space-x-8 text-gray-300">
+            <div class="flex items-center space-x-2"><svg class="w-5 h-5" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg><span>Free Shipping Over ₹1000</span></div>
+            <div class="flex items-center space-x-2"><svg class="w-5 h-5" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg><span>7-Day Returns</span></div>
+            <div class="flex items-center space-x-2"><svg class="w-5 h-5" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg><span>Stretchable Cloths</span></div>
+          </div>
+          <div class="mt-8"><img data-ai="generate" data-slot="cta-final"
+              data-prompt="Dynamic action shot of athlete in Flexify gear crossing finish line or achieving victory"
+              data-ar="16:9"
+              src="https://cdn.ailandingpage.ai/ai-landingpage/user-generate/1fa2f5c3-4bdd-45bc-a8fe-e59179a85299/1fa2f5c3-4bdd-45bc-a8fe-e59179a85299/cta/cta-final-e5ec69924d4e45d5b401cb998dd3e6f6.png"
+              alt="Achieve your goals with Flexify" width="1200" height="675"
+              class="w-full max-w-3xl mx-auto rounded-2xl object-cover shadow-lg" loading="lazy" decoding="async"
+              fetchpriority="auto" /></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="bg-black text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="col-span-1">
+          <h2 class="text-2xl font-bold mb-4">Flexify</h2>
+          <p class="text-gray-400 text-sm">Premium football wear for peak performance. Designed for football players who
+            demand the best.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Shop</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Men's Collection</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Women's Collection</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">New Arrivals</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sale</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Company</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sustainability</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Support</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Size Guide</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping & Returns</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">&copy; 2026 Flexify. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="https://www.instagram.com/flexify_official_/"
+            class="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+          <a href="https://wa.me/919087733332" class="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="products.js"></script>
+  <script src="client_products.js"></script>
+  <script>
+    // Initialize lucide icons
+    lucide.createIcons();
+
+    // Mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileSidebar = document.getElementById('mobileSidebar');
+      const mobileOverlay = document.getElementById('mobileOverlay');
+      const closeMobileMenu = document.getElementById('closeMobileMenu');
+      const checkoutBtn = document.getElementById('checkout-btn');
+      const mobileCheckoutBtn = document.getElementById('mobileCheckoutBtn');
+
+      // Toggle mobile menu
+      function toggleMobileMenu() {
+        mobileSidebar.classList.toggle('-translate-x-full');
+        mobileOverlay.classList.toggle('hidden');
+
+        // Toggle body scroll when menu is open
+        if (!mobileSidebar.classList.contains('-translate-x-full')) {
+          document.body.classList.add('overflow-hidden');
+        } else {
+          document.body.classList.remove('overflow-hidden');
+        }
+      }
+
+      // Event listeners
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+      closeMobileMenu.addEventListener('click', toggleMobileMenu);
+      mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+      // Add event listener to mobile checkout button
+      if (mobileCheckoutBtn && checkoutBtn) {
+        mobileCheckoutBtn.addEventListener('click', function () {
+          checkoutBtn.click();
+          toggleMobileMenu(); // Close the menu after clicking
+        });
+      }
+
+      // Initialize cart count
+      updateCartCount();
+    });
+
+    // Function to update cart count in UI
+    function updateCartCount() {
+      // For WhatsApp orders, we just show a notification
+      // In a real implementation, this would update the cart count
+      // For now, we'll just keep it as a placeholder
+      const cartCountElements = document.querySelectorAll('#cart-count, #mobile-cart-count');
+      cartCountElements.forEach(element => {
+        // For now, we'll just show a placeholder count
+        // In a real implementation, you would track selected items
+        element.textContent = '0';
+      });
+    }
+
+    // Disable right-click functionality
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+      return false;
+    });
+  </script>
+</body>
+
+</html>
