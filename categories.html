@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jersey Categories - Flexify Premium Football Jerseys</title>
+  <meta name="description" content="Explore our premium football jersey categories including Mensla, Sublimation, Embroidery, Signature Embroidery, Fan Version, FC Set, Master Version, and Player Version jerseys.">
+  <link rel="canonical" href="https://flexify.com/categories">
+  <meta property="og:title" content="Jersey Categories - Flexify Premium Football Jerseys">
+  <meta property="og:description" content="Explore our premium football jersey categories including Mensla, Sublimation, Embroidery, Signature Embroidery, Fan Version, FC Set, Master Version, and Player Version jerseys.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flexify.com/categories">
+  <meta property="og:image" content="https://flexify.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jersey Categories - Flexify Premium Football Jerseys">
+  <meta name="twitter:description" content="Explore our premium football jersey categories including Mensla, Sublimation, Embroidery, Signature Embroidery, Fan Version, FC Set, Master Version, and Player Version jerseys.">
+  <meta name="twitter:image" content="https://flexify.com/og-image.jpg">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="index.html">
+            <img src="Flexify_Web_Logo.png" alt="Flexify Logo" width="150" height="40" class="h-10">
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="collections.html" class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">Collections</a>
+          <a href="men.html" class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">Men</a>
+          <a href="categories.html" class="text-black hover:text-gray-700 px-3 py-2 text-sm font-medium transition-colors">Categories</a>
+          <a href="about.html" class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">About</a>
+          <a href="contact.html" class="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a href="cart.html" class="hidden md:block relative text-gray-600 hover:text-black">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-green-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+          </a>
+          <!-- Admin login removed as per requirements -->
+          <button class="md:hidden p-2 rounded-full" id="mobileMenuBtn">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu Sidebar -->
+    <div id="mobileSidebar" class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+      <div class="flex flex-col h-full">
+        <div class="p-4 border-b border-gray-200">
+          <h2 class="text-xl font-bold">Menu</h2>
+        </div>
+        <nav class="flex-1 p-4 space-y-4">
+          <a href="collections.html" class="block py-2 text-gray-600 hover:text-black font-medium">Collections</a>
+          <a href="men.html" class="block py-2 text-gray-600 hover:text-black font-medium">Men</a>
+          <a href="categories.html" class="block py-2 text-gray-600 hover:text-black font-medium">Categories</a>
+          <a href="about.html" class="block py-2 text-gray-600 hover:text-black font-medium">About</a>
+          <a href="contact.html" class="block py-2 text-gray-600 hover:text-black font-medium">Contact</a>
+          <!-- Admin login removed as per requirements -->
+          <a href="cart.html" class="block py-2 text-gray-600 hover:text-black font-medium">Order via WhatsApp (<span id="mobile-cart-count">0</span>)</a>
+        </nav>
+        <div class="p-4 border-t border-gray-200">
+          <button id="closeMobileMenu" class="w-full py-2 px-4 bg-gray-100 rounded-lg text-gray-700 font-medium">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Overlay for mobile menu -->
+    <div id="mobileOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+  </header>
+
+  <main>
+    <section class="min-h-screen">
+      <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h1 class="text-4xl lg:text-5xl font-bold text-black mb-6">Jersey Categories</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover our premium range of football jerseys in different categories and styles designed for every type of player and fan.</p>
+          </div>
+          
+          <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+            <!-- Mensla Category -->
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6">
+                <img data-ai="generate" data-slot="category-mensla" data-prompt="Premium Mensla football jersey, high-quality fabric, elegant design, football player wearing Mensla jersey" data-ar="4:3" src="mensla_cover.jpg" alt="Mensla Jersey" width="400" height="300" class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Mensla</h3>
+                  <a href="collections.html" class="text-lg font-medium">Shop Now →</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Mensla Jerseys</h3>
+                <p class="text-gray-600">Premium quality jerseys with superior comfort and style, perfect for professional and recreational players.</p>
+              </div>
+            </div>
+            
+            <!-- Sublimation Category -->
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6">
+                <img data-ai="generate" data-slot="category-sublimation" data-prompt="Sublimation football jersey, vibrant colors, unique patterns, modern sublimation printing technique" data-ar="4:3" src="sublimations_cover.jpg" alt="Sublimation Jersey" width="400" height="300" class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Sublimation</h3>
+                  <a href="collections.html" class="text-lg font-medium">Shop Now →</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Sublimation Jerseys</h3>
+                <p class="text-gray-600">Vibrant colors and unique patterns using advanced sublimation printing technology for long-lasting durability.</p>
+              </div>
+            </div>
+            
+            <!-- Embroidery Category -->
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6">
+                <img data-ai="generate" data-slot="category-embroidery" data-prompt="Embroidered football jersey, detailed embroidery work, premium quality stitching, close-up of embroidery details" data-ar="4:3" src="embroidery_cover.jpg" alt="Embroidery Jersey" width="400" height="300" class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Embroidery</h3>
+                  <a href="collections.html" class="text-lg font-medium">Shop Now →</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Embroidery Jerseys</h3>
+                <p class="text-gray-600">Detailed embroidery work with premium quality stitching that adds a sophisticated touch to your jersey.</p>
+              </div>
+            </div>
+            
+            <!-- Signature Embroidery Category -->
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6">
+                <img data-ai="generate" data-slot="category-signature-embroidery" data-prompt="Signature embroidered football jersey, elegant signature embroidery, premium quality, detailed close-up" data-ar="4:3" src="signature_embroidery_cover.jpg" alt="Signature Embroidery Jersey" width="400" height="300" class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Signature Embroidery</h3>
+                  <a href="collections.html" class="text-lg font-medium">Shop Now →</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Signature Embroidery</h3>
+                <p class="text-gray-600">Elegant signature-style embroidery that adds a unique and personalized touch to your jersey.</p>
+              </div>
+            </div>
+            
+            <!-- Fan Version Category -->
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6">
+                <img data-ai="generate" data-slot="category-fan-version" data-prompt="Fan version football jersey, supporter jersey, team colors, football fan wearing team jersey" data-ar="4:3" src="fan_version_cover.jpg" alt="Fan Version Jersey" width="400" height="300" class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Fan Version</h3>
+                  <a href="collections.html" class="text-lg font-medium">Shop Now →</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Fan Version</h3>
+                <p class="text-gray-600">Perfect for supporters and fans who want to show their team pride with authentic team colors and design.</p>
+              </div>
+            </div>
+            
+            <!-- FC Set Category -->
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6">
+                <img data-ai="generate" data-slot="category-fc-set" data-prompt="FC Set football jersey collection, complete team set, matching jerseys for team" data-ar="4:3" src="fc_set_cover.jpg" alt="FC Set Jersey" width="400" height="300" class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">FC Set</h3>
+                  <a href="collections.html" class="text-lg font-medium">Shop Now →</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">FC Set</h3>
+                <p class="text-gray-600">Complete team sets with matching jerseys for clubs and organizations, ensuring uniformity and team spirit.</p>
+              </div>
+            </div>
+            
+            <!-- Master Version Category -->
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6">
+                <img data-ai="generate" data-slot="category-master-version" data-prompt="Master version football jersey, premium edition, high-quality materials, exclusive design" data-ar="4:3" src="master_version.jpeg" alt="Master Version Jersey" width="400" height="300" class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Master Version</h3>
+                  <a href="collections.html" class="text-lg font-medium">Shop Now →</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Master Version</h3>
+                <p class="text-gray-600">Premium edition jerseys with the highest quality materials and exclusive designs for the ultimate football experience.</p>
+              </div>
+            </div>
+            
+            <!-- Player Version Category -->
+            <div class="group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl mb-6">
+                <img data-ai="generate" data-slot="category-player-version" data-prompt="Player version football jersey, authentic player design, professional quality, match-ready jersey" data-ar="4:3" src="player_version.jpg" alt="Player Version Jersey" width="400" height="300" class="w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 class="text-2xl font-bold mb-2">Player Version</h3>
+                  <a href="collections.html" class="text-lg font-medium">Shop Now →</a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold text-black mb-3">Player Version</h3>
+                <p class="text-gray-600">Authentic player design jerseys with professional quality materials, perfect for match play and training.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="bg-black text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="col-span-1">
+          <h2 class="text-2xl font-bold mb-4">Flexify</h2>
+          <p class="text-gray-400 text-sm">Premium football jerseys for peak performance. Designed for football players who demand the best.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Shop</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="men.html" class="text-gray-400 hover:text-white transition-colors">Men's Collection</a></li>
+            <li><a href="categories.html" class="text-gray-400 hover:text-white transition-colors">Jersey Categories</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">New Arrivals</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sale</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Company</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sustainability</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Support</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Size Guide</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping & Returns</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+          <p class="text-gray-400 text-sm">&copy; 2026 Flexify. All rights reserved.</p>
+          <p class="text-gray-400 text-sm">|</p>
+          <p class="text-gray-400 text-sm">Developed by <a href="https://echoess.in" target="_blank" class="text-white hover:text-blue-400 transition-colors underline">Echoes Software Technologies</a></p>
+        </div>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="https://www.instagram.com/flexify_official_/" class="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+          <a href="https://wa.me/919087733332" class="text-gray-400 hover:text-white transition-colors" target="_blank">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="products.js"></script>
+  <script src="client_products.js"></script>
+  <script>
+    // Initialize lucide icons
+    lucide.createIcons();
+    
+    // Mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileSidebar = document.getElementById('mobileSidebar');
+      const mobileOverlay = document.getElementById('mobileOverlay');
+      const closeMobileMenu = document.getElementById('closeMobileMenu');
+      const checkoutBtn = document.getElementById('checkout-btn');
+      const mobileCheckoutBtn = document.getElementById('mobileCheckoutBtn');
+      
+      // Toggle mobile menu
+      function toggleMobileMenu() {
+        mobileSidebar.classList.toggle('-translate-x-full');
+        mobileOverlay.classList.toggle('hidden');
+        
+        // Toggle body scroll when menu is open
+        if (!mobileSidebar.classList.contains('-translate-x-full')) {
+          document.body.classList.add('overflow-hidden');
+        } else {
+          document.body.classList.remove('overflow-hidden');
+        }
+      }
+      
+      // Event listeners
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+      closeMobileMenu.addEventListener('click', toggleMobileMenu);
+      mobileOverlay.addEventListener('click', toggleMobileMenu);
+      
+      // Initialize cart count
+      function updateCartCount() {
+        // For WhatsApp orders, we just show a notification
+        // In a real implementation, this would update the cart count
+        // For now, we'll just keep it as a placeholder
+        const cartCountElements = document.querySelectorAll('#cart-count, #mobile-cart-count');
+        cartCountElements.forEach(element => {
+          // For now, we'll just show a placeholder count
+          // In a real implementation, you would track selected items
+          element.textContent = '0';
+        });
+      }
+      
+      // Add event listener to mobile checkout button
+      if (mobileCheckoutBtn && checkoutBtn) {
+        mobileCheckoutBtn.addEventListener('click', function() {
+          checkoutBtn.click();
+          toggleMobileMenu(); // Close the menu after clicking
+        });
+      }
+      
+      // Initialize cart count
+      updateCartCount();
+      
+      // Removed MutationObserver for better performance
+      // updateCartCounts is called directly when needed instead
+    });
+    
+    // Disable right-click functionality
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      return false;
+    });
+  </script>
+</body>
+</html>
